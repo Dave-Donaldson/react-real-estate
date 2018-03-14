@@ -123,19 +123,39 @@
 			}
 			.listing-img{
 				color:white;
+				padding:15px;
+				position: relative;
 				background: url("http://www.writework.com/uploads/11/117130/single-family-home.jpg")
 				no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-		background-size: cover;
-		min-height:200px;
-		-webkit-border-top-left-radius: 5px;
-		-webkit-border-top-right-radius: 5px;
-		-moz-border-radius-topleft: 5px;
-		-moz-border-radius-topright: 5px;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				min-height:200px;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+
+				.details{
+					position: absolute;
+					top:0;
+					left:0;
+					bottom:0;
+					right:0;
+					background: rgba(100,0,232, .8);
+					background: -moz-linear-gradient(-45deg, rgba(100,0,232, .8) 1%, rgba(183,81,247, .8) 100%); 
+					background: -webkit-linear-gradient(-45deg, rgba(100,0,232, .8) 1%,rgba(183,81,247, .8) 100%); 
+					background: linear-gradient(135deg, rgba(100,0,232, .8) 1%,rgba(183,81,247, .8) 100%); 
+					-webkit-border-top-left-radius: 5px;
+					-webkit-border-top-right-radius: 5px;
+					-moz-border-radius-topleft: 5px;
+					-moz-border-radius-topright: 5px;
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+				}
 
 			}
 		}
