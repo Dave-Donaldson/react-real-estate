@@ -1,9 +1,11 @@
 #filter{
 	background:$grey;
 	width:30%;
+	max-width: 300px;
 	
 	.inside{
 		padding: 20px;
+		max-width: 300px;
 	}
 
 	h4{
@@ -11,28 +13,45 @@
 		margin-bottom: 25px;
 		font-weight: 500;
 		text-transform: uppercase;
-
-
-	}
+		}
 
 	select{
 		background:transparent;
 		padding:10px;
 		font-size: 14px;
-		font-weight: 300;
+		font-weight: 500;
 		color:#1b1b1b;
 		display: block;
+		margin-bottom: 25px;
 		width:100%;
 	}
 	.filters{
 		.title{
 			font-size: .9rem;
 			display: block;
+			margin-bottom: 1rem;
+			color:$darkGrey;
 		}
-		input [type="text"]{
-			width:50%;
+		input[type="text"]{
+			border-radius: 5px;
+			font-size: 1rem;
+			padding:.4rem;
+			width:45%;
 			display: inline-block;
+			margin-right: 2.5%;
+			margin-bottom: 1rem;
+		}
+		&.extras{
+			label{
+				display: block;
+				width:100%;
+				padding:10px 0;
+				input[type="checkbox"]{
+					float:right;
 
+				}
+
+			}
 		}
 	}
 }

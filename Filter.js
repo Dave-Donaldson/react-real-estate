@@ -38,12 +38,15 @@ export default class Filter extends Component {
         </div>
 
           <div className="filters floor-space">
-          <span className="title" > Price </span>
+          <span className="title" > Floor Space </span>
           <input type="text" name="min-floor-space" />
           <input type="text" name="max-floor-space" />
         </div>
 
           <div className="filters extras">
+          <span className="title">
+            Extras
+          </span>
           <label htmlFor="extras">
             <span> Elevators </span>
             <input name="extras" value="elevator" type="checkbox" />
