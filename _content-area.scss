@@ -1,7 +1,15 @@
+#content-area{
+	overflow: auto;
+			width:100%;
+			background: black;
+			min-height: 100vh;
+}
 #filter{
 	background:$grey;
 	width:30%;
 	max-width: 300px;
+	display: inline-block;
+	float: left;
 	
 	.inside{
 		padding: 20px;
@@ -52,6 +60,63 @@
 				}
 
 			}
+		}
+	}
+}
+
+#listings{
+	width:70%;
+	float: left;
+	display: inline-block;
+	padding:15px;
+	background: $offWhite;
+	.search-area{
+		input[type="text"]{
+			width:70%;
+			background: transparent;
+			font-size: 2rem;
+			border:none;
+			border-bottom:2px solid $lightGrey;
+			margin-bottom:20px;
+			color:$lightGrey;
+			
+		}
+	}
+	.sortby-area{
+		margin-bottom: 20px;
+		.results{
+			font-size: .8rem;
+			color:$lightGrey;
+			display: inline-block;
+		}
+		.sort-options{
+			float:right;
+			select{
+				font-size: .9rem;
+				font-weight: 300;
+				border:1px solid $lightGrey;
+				background: transparent;
+				padding:10px;
+				display: inline-block;
+				margin-right:15px;
+				vertical-align: top;
+			}
+			.view{
+				display: inline-block;
+				.fas{
+					display: inline-block;
+					font-size: 1.5rem;
+					margin-right:15px;
+				}
+			}
+			
+		}
+	}
+	.listings-results{
+		.listing{
+			background: #fff;
+			width:33.33%;
+
 		}
 	}
 }
