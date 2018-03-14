@@ -175,7 +175,7 @@ var Filter = function (_Component) {
             _react2.default.createElement(
               'span',
               { className: 'title' },
-              ' Price '
+              ' Floor Space '
             ),
             _react2.default.createElement('input', { type: 'text', name: 'min-floor-space' }),
             _react2.default.createElement('input', { type: 'text', name: 'max-floor-space' })
@@ -183,6 +183,11 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'filters extras' },
+            _react2.default.createElement(
+              'span',
+              { className: 'title' },
+              'Extras'
+            ),
             _react2.default.createElement(
               'label',
               { htmlFor: 'extras' },
