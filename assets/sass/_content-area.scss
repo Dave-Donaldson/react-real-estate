@@ -284,8 +284,31 @@
 	}
 
 	#pagination{
+		text-align: center;
 		.pages{
+			display: inline-block;
+			background: #fff;
+			-webkit-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+			-moz-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+			box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
+			li {
+				display: inline-block;
+				padding:20px 30px;
 
+				&.active,
+				&:hover {
+					color:#fff;
+					font-weight: 700;
+					background:$pink;
+					-webkit-border-top-left-radius: 5px;
+					-webkit-border-top-right-radius: 5px;
+					-moz-border-radius-topleft: 5px;
+					-moz-border-radius-topright: 5px;
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+					cursor: pointer;
+				}
+			}
 		}
 	}
 
