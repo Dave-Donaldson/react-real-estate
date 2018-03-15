@@ -796,7 +796,7 @@ var Listings = function (_Component) {
               ),
               _react2.default.createElement(
                 'li',
-                null,
+                { className: 'active' },
                 '2'
               ),
               _react2.default.createElement(
