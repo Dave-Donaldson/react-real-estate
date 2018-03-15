@@ -12,11 +12,12 @@ export default class Listings extends Component {
   render () {
     return (
     <section id="listings">
+      <div className="container">
       <section className="search-area">
       <input type="text" name="search" />
       </section>
 
-      <section className="sortby-area"> 
+      <div className="sortby-area"> 
         <div className="results">390 results found</div>
           <div className="sort-options"> 
             <select name="sortby" className="sortby">
@@ -27,8 +28,9 @@ export default class Listings extends Component {
                 < i className = "fas fa-th-list" > </i>
                 < i className = "fas fa-th" > </i>
               </div>
-        </div>
-      </section>
+            </div>
+        
+      </div>
 
     <section className = "listings-results">
       <div className="col-md-3"> 
@@ -171,8 +173,8 @@ export default class Listings extends Component {
 
     
 
-      <section className = "pagination" > 
-        <ul className="pagination-nums">
+      <section id="pagination"> 
+        <ul className="pages">
           <li>Prev</li>
           <li>1</li>
           <li>2</li>
@@ -182,6 +184,7 @@ export default class Listings extends Component {
           <li>Next</li>
         </ul>
       </section>
+      </div>
     </section>
   )
   }
