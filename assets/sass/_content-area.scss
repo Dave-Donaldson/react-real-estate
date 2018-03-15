@@ -10,6 +10,10 @@
 	max-width: 300px;
 	display: inline-block;
 	float: left;
+	.container{
+		width:95%;
+
+	}
 	
 	.inside{
 		padding: 20px;
@@ -85,6 +89,8 @@
 		}
 	}
 	.sortby-area{
+		width:100%;
+		display: inline-block;
 		margin-bottom: 20px;
 		.results{
 			font-size: .8rem;
@@ -250,6 +256,17 @@
 				}
 			}
 		}
+		.col-md-3{
+			width:25%;
+			display: inline-block;
+			vertical-align: top;
+			padding:0 15px;
+		}
+	
+		.col-md-9{
+			width:75%;
+			display: inline-block;
+		}
 	}
 	.view-btn{
 		background: black;
@@ -266,14 +283,10 @@
 		
 	}
 
-	.col-md-3{
-		width:19% !important;
-		display: inline-block;
-		vertical-align: top;
-		padding:0 15px;
+	#pagination{
+		.pages{
+
+		}
 	}
 
-	.col-md-9{
-		width:75%;
-		display: inline-block;
-	}
+	
