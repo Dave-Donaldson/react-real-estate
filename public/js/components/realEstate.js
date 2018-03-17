@@ -138,6 +138,9 @@ var App = function (_Component) {
     _this.state = {
       name: 'Joe',
       listingsData: _listingsData2.default,
+      neighborhood: 'Abingdon',
+      homeType: 'Ranch',
+      rooms: 1,
       min_price: 0,
       max_price: 10000000,
       min_floor_space: 0,
@@ -146,10 +149,12 @@ var App = function (_Component) {
       finished_basement: false,
       swimming_pool: false,
       gym: false,
-      garage: false
+      garage: false,
+      filteredData: _listingsData2.default
 
     };
     _this.change = _this.change.bind(_this);
+    _this.filteredData = _this.filteredData.bind(_this);
     return _this;
   }
 
@@ -163,6 +168,24 @@ var App = function (_Component) {
 
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
+        // runs filteredData function on any change to the state
+        _this2.filteredData();
+      });
+    }
+
+    //  this function filters the data using the pice and floor space 
+    //  parameters
+
+  }, {
+    key: 'filteredData',
+    value: function filteredData() {
+      var _this3 = this;
+
+      var newData = this.state.listingsData.filter(function (item) {
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space;
+      });
+      this.setState({
+        filteredData: newData
       });
     }
   }, {
@@ -176,7 +199,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );
     }
@@ -536,6 +559,10 @@ var Listings = function (_Component) {
     value: function loopListings() {
       var listingsData = this.props.listingsData;
 
+
+      if (listingsData == undefined || listingsData.length == 0) {
+        return "Sorry your filter did not match any listing";
+      }
 
       return listingsData.map(function (listing, index) {
         return _react2.default.createElement(
